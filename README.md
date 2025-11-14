@@ -14,10 +14,10 @@ In this lab, we learned how to make clock dividers from two types of counters.
 ## Lab Questions
 
 ## Lab Summary
-
+In this lab we created a modulo-6 counter and a ripple counter. The modulo-6 counter uses adders and d-flipflops to count up and used a comparator to see if the counter increased to 5. After it counts to 5 or if the reset button is switched, it resets back to 0. The ripple counter counts down from 7 to 0 until it overflows back to 7. Becuase the inputs for the following t-flipflops require the input from the previous one, there is a slight delay from the original clock. These are designed to be utilized as a frequecy divider.
 
 ### 1 - Why does the Modulo Counter actually divide clocks by 2 * Count?
-
+A single "Hz" is defined as the time between the signal going from high to low and back to high. Therefore, the clock will go through 2 counts to reach a single Hz.
 
 ### 2 - Why does the ring counter's output go to all 1s on the first clock cycle?
 This is because we are using the output of Q as the input for the next clock, which leads to a downward counter. If you wanted it to count up (i.e. incrementing upwards) you would want to use the ~Q as the input for the next T-flip-flops clock.
